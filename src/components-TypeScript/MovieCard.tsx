@@ -153,7 +153,7 @@ const styles = (theme: Theme) =>
     apiCall = async (): Promise<void> => {
         const { id } = this.props;
         try {
-          const response: AxiosResponse<any> = await axios.get(`http://www.omdbapi.com/?apikey=15cf981a&i=${id}`);
+          const response: AxiosResponse<any> = await axios.get(`https://www.omdbapi.com/?apikey=15cf981a&i=${id}`);
           this.setState({ movie: response.data });
         } catch (err) {
           console.error(err);

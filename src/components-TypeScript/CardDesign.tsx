@@ -43,7 +43,7 @@ class CardList extends Component<CardListProps, CardListState> {
     this.state = {
       searchQuery: "movies",
       movies: [],
-      randomNum: 2
+      randomNum: 1
     };
     this.handleSearchQueryChange = this.handleSearchQueryChange.bind(this);
     this.apiCall = this.apiCall.bind(this);
@@ -70,7 +70,7 @@ class CardList extends Component<CardListProps, CardListState> {
     // const randomNum = 1;
     // const randomNum = Math.floor(Math.random() * 100) + 1;
     console.log("api call")
-    let url = `http://www.omdbapi.com/?apikey=15cf981a&s=${query}&page=${this.state.randomNum}`;
+    let url = `https://www.omdbapi.com/?apikey=15cf981a&s=${query}&page=${this.state.randomNum}`;
     try {
       const response = await axios.get(url);
       this.setState({
